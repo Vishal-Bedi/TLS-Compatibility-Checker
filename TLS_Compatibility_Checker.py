@@ -8,9 +8,7 @@ import ipaddress
 import shutil
 from ipaddress import IPv4Address
 
-
-def Range():
-	
+def Range():	
 	
 	sip = input("Enter Start IP: ")
 	eip = input("Enter End IP: ")
@@ -21,10 +19,10 @@ def Range():
 	if '.' not in sip:
 		print("IP address is invalid.")
 		sys.exit()
+	
 	try:
 		socket.inet_aton(sip)
 		socket.inet_aton(eip)
-
 	except socket.error:
 		print ("IP address is invalid.")
 		sys.exit()  
@@ -56,10 +54,8 @@ def SingleIP():
 	  
 	return singleip
 
-
 def readFile(passed_list, inputvalue):
-	
-	
+		
 	if inputvalue == "3":
 		file1 = open("IP_List.txt", "w")
 		file1.close()
@@ -87,16 +83,13 @@ def readFile(passed_list, inputvalue):
 			sys.exit()
 		
 		result = switch(ip)
-		iplist.append(result)
+		iplist.append(result)	
 		
-
 	file1.close()
 	if inputvalue == "3":		
 		os.remove("IP_List.txt")
 
 	filename2 = input("\nEnter Filename to store TLSv0 IP's: ")
-
-
 	file3 = open(filename2,"a")
 	file3.seek(0)
 	file3.truncate()
@@ -132,7 +125,6 @@ def switch(ip):
 		print ("********************")
 	return iplist1
 	
-
 def main():
 	iplist2 = ''
 	inputvalue = input("Select an option: \n 1: Check Single IP \n 2: Check IP Range \n 3: Check IP's using file \n\n Your Input: ")
