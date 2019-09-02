@@ -1,5 +1,5 @@
 # TLS-Compatibility-Checker
-
+```
 1.	Prerequisites: 
 •	nmap
 •	Python3 
@@ -11,5 +11,5 @@ The script lets you test the IP addresses for the compatibility with TLS v1.0, v
 •	File containing list of IP addresses 
 
 The script will create a .txt file containing all the IP’s found compatible with TLS 1.0 in the same directory as that of the script.
-
+```
 
